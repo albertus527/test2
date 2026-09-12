@@ -235,7 +235,6 @@ h1, h2, h3, h4, .display-year, .display-huge, .display-large, .place-name {
 .photo-duo .photo-frame {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/5;
 }
 
 .photo-grid-2 {
@@ -291,22 +290,285 @@ h1, h2, h3, h4, .display-year, .display-huge, .display-large, .place-name {
   word-break: break-all;
 }
 
-/* Photo Sizing Variations */
-.small-photo { width: 140px; height: 180px; }
-.square-photo { width: 220px; height: 220px; }
-.portrait-photo { width: 240px; height: 320px; }
-.landscape-photo { width: 100%; max-width: 340px; height: 230px; }
-.large-photo { width: 100%; max-width: 360px; height: 360px; }
+/* Media Object Fit Helpers */
+.media-cover {
+  object-fit: cover !important;
+}
+
+.media-contain {
+  object-fit: contain !important;
+  background-color: #1c201a;
+}
+
+/* Base Photo Frame Sizing (Fluid & Aspect-Ratio based) */
+.small-photo {
+  width: 100%;
+  max-width: 155px;
+  aspect-ratio: 9/16;
+  height: auto;
+}
+
+.square-photo {
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 1/1;
+  height: auto;
+}
+
+.portrait-photo {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 3/4;
+  height: auto;
+}
+
+.landscape-photo {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3/2;
+  height: auto;
+}
+
+.large-photo {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3/2;
+  height: auto;
+}
+
 .hero-photo {
   width: 100%;
-  height: 60vh;
+  height: auto;
+  aspect-ratio: 4/3;
+  max-height: 55vh;
   border-radius: 0;
+  background-color: #1a1e19;
 }
+
+.hero-photo.hero-portrait {
+  aspect-ratio: 9/16;
+  max-height: 60vh;
+}
+
+.hero-photo.hero-portrait img.memory-media {
+  object-fit: cover;
+  object-position: center 25%;
+}
+
 .hero-full {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
   width: calc(100% + 3rem);
   border-radius: 0;
+}
+
+/* Semantic & Helper Frame Classes */
+.photo-natural {
+  width: 100%;
+  height: auto;
+}
+
+.photo-natural img.memory-media {
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.photo-portrait {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 3/4;
+  height: auto;
+}
+
+.photo-tall-portrait {
+  width: 100%;
+  max-width: 230px;
+  aspect-ratio: 9/16;
+  height: auto;
+}
+
+.photo-landscape {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 3/2;
+  height: auto;
+}
+
+.photo-landscape-wide {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.photo-screenshot {
+  width: 100%;
+  max-width: 155px;
+  aspect-ratio: 9/16;
+  height: auto;
+  background-color: #121511;
+}
+
+.photo-screenshot img.memory-media {
+  object-fit: contain;
+}
+
+.photo-document {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3/4;
+  height: auto;
+  background-color: #E8E1D5;
+}
+
+.photo-document img.memory-media {
+  object-fit: contain;
+}
+
+.photo-family {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.photo-family img.memory-media {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Per-Photo Special Framing to Prevent Cropping */
+.photo-first-meeting {
+  width: 100%;
+  max-width: 275px;
+  aspect-ratio: 11/13;
+  height: auto;
+}
+
+.photo-first-meeting img.memory-media {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.photo-bandung-deer {
+  width: 100%;
+  aspect-ratio: 4/3;
+  height: auto;
+}
+
+.photo-bandung-deer img.memory-media {
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-bandung-mall {
+  width: 100%;
+  aspect-ratio: 1/1;
+  height: auto;
+}
+
+.photo-bandung-mall img.memory-media {
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-car-date-1 {
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 3/4;
+  height: auto;
+}
+
+.photo-car-date-1 img.memory-media {
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-car-date-3 {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 4/3;
+  height: auto;
+}
+
+.photo-car-date-3 img.memory-media {
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-jogja-dimsum {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.photo-jogja-dimsum img.memory-media {
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.photo-jogja-watermelon {
+  width: 100%;
+  max-width: 230px;
+  aspect-ratio: 9/16;
+  height: auto;
+}
+
+.photo-jogja-watermelon img.memory-media {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.photo-jogja-photobooth {
+  width: 100%;
+  max-width: 210px;
+  aspect-ratio: 9/16;
+  height: auto;
+  background-color: #121411;
+}
+
+.photo-jogja-photobooth img.memory-media {
+  object-fit: contain;
+}
+
+.photo-garden {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3/4;
+  height: auto;
+  margin: 0 auto;
+}
+
+.photo-garden img.memory-media {
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-niece-nephew {
+  width: 100%;
+  max-width: 270px;
+  aspect-ratio: 3/4;
+  height: auto;
+}
+
+.photo-niece-nephew img.memory-media {
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.photo-feb-landing {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 9/16;
+  height: auto;
+  margin: 0 auto;
+}
+
+.photo-feb-landing img.memory-media {
+  object-fit: cover;
+  object-position: center 25%;
 }
 
 .photo-caption {
@@ -496,8 +758,9 @@ h1, h2, h3, h4, .display-year, .display-huge, .display-large, .place-name {
 /* 10) Interactive Photo Stack */
 .card-stack-container {
   position: relative;
-  width: 240px;
-  height: 330px;
+  width: 250px;
+  max-width: calc(100vw - 3rem);
+  height: 340px;
   margin: 0 auto;
 }
 
@@ -507,7 +770,7 @@ h1, h2, h3, h4, .display-year, .display-huge, .display-large, .place-name {
   left: 0;
   width: 100%;
   background: var(--color-bg);
-  padding: 0.75rem 0.75rem 1rem;
+  padding: 0.75rem 0.75rem 0.85rem;
   border: 1px solid #E2DBD0;
   border-radius: 6px;
   box-shadow: 0 6px 20px rgba(32, 37, 31, 0.08);
@@ -523,8 +786,19 @@ h1, h2, h3, h4, .display-year, .display-huge, .display-large, .place-name {
 
 .stack-card .photo-frame {
   width: 100%;
-  height: 220px;
+  height: 225px;
   border-radius: 4px;
+  background-color: #1a1e18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.stack-card .photo-frame img.memory-media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .stack-card .caption {
