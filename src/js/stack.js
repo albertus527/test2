@@ -15,6 +15,9 @@ export function initInteractiveStack() {
         card.style.zIndex = index + 1;
         card.style.opacity = '1';
         card.style.pointerEvents = index === currentCardIndex ? 'auto' : 'none';
+      } else {
+        card.style.opacity = '0';
+        card.style.pointerEvents = 'none';
       }
     });
   }

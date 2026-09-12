@@ -16,7 +16,7 @@ export function initScrollReveals() {
   }, observerOptions);
 
   const revealElements = document.querySelectorAll(
-    '.opening-content, .photo-wrapper, .scroll-fade, .memory-item, .frame-group, .wish-block p, .editorial-block, .career-step, .filmstrip-item, .contact-sheet'
+    '.opening-content, .photo-wrapper, .scroll-fade, .memory-item, .frame-group, .wish-block p, .editorial-block, .career-step, .filmstrip-item, .contact-sheet, .photo-duo, .photo-grid-2'
   );
   
   revealElements.forEach(el => {

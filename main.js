@@ -5,7 +5,7 @@ import { initParallax } from './src/js/parallax.js';
 import { initMediaHandling } from './src/js/media.js';
 import { initAudio } from './src/js/audio.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   const audioController = initAudio();
   initMediaHandling(
     () => audioController.pauseForVideo(),
@@ -15,4 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initInteractiveStack();
   initLetterReveal();
   initParallax();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}

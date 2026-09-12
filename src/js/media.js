@@ -5,7 +5,7 @@
 
 export function initMediaHandling(onVideoPlay, onVideoPause) {
   // 1. Image fallback & loaded state handler
-  const images = document.querySelectorAll('.photo-frame img.memory-media, .ending-photo img.memory-media');
+  const images = document.querySelectorAll('.photo-frame img.memory-media, .ending-photo img.memory-media, .contact-thumb img');
   
   images.forEach(img => {
     if (img.complete) {
@@ -29,10 +29,16 @@ export function initMediaHandling(onVideoPlay, onVideoPause) {
   const allVideos = document.querySelectorAll('.video-frame video');
 
   allVideos.forEach(video => {
-    video.addEventListener('error', () => {
+    const markFailed = () => {
       video.classList.add('media-failed');
       const frame = video.closest('.video-frame');
       if (frame) frame.classList.add('video-failed');
+    };
+
+    video.addEventListener('error', markFailed);
+    const sources = video.querySelectorAll('source');
+    sources.forEach(src => {
+      src.addEventListener('error', markFailed);
     });
 
     video.addEventListener('play', () => {
