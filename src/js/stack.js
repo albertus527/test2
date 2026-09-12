@@ -4,51 +4,56 @@ export function initInteractiveStack() {
 
   let currentCardIndex = stackCards.length - 1;
 
-  // Initialize visual arrangement
+  function updateCardTransforms() {
+    stackCards.forEach((card, index) => {
+      if (index <= currentCardIndex) {
+        const reverseIndex = currentCardIndex - index;
+        const rotateDeg = reverseIndex === 0 ? 0 : (reverseIndex % 2 === 0 ? reverseIndex * 1.5 : -reverseIndex * 1.5);
+        const yOffset = reverseIndex * 6;
+        const scaleVal = 1 - reverseIndex * 0.035;
+        card.style.transform = `translateY(${yOffset}px) scale(${scaleVal}) rotate(${rotateDeg}deg)`;
+        card.style.zIndex = index + 1;
+        card.style.opacity = '1';
+        card.style.pointerEvents = index === currentCardIndex ? 'auto' : 'none';
+      }
+    });
+  }
+
   stackCards.forEach((card, index) => {
-    const reverseIndex = stackCards.length - 1 - index;
-    card.style.transform = `translateY(${reverseIndex * 8}px) scale(${1 - reverseIndex * 0.05}) rotate(${reverseIndex % 2 === 0 ? reverseIndex : -reverseIndex}deg)`;
-    card.style.zIndex = index;
-    
     card.addEventListener('click', () => {
       if (index === currentCardIndex) {
-        swipeCard(card, index);
+        swipeCard(card);
       }
     });
   });
 
-  function swipeCard(card, index) {
+  updateCardTransforms();
+
+  function swipeCard(card) {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const duration = prefersReducedMotion ? '0.1s' : '0.4s';
-    
+    const duration = prefersReducedMotion ? '0.1s' : '0.45s';
+
     card.style.transition = `transform ${duration} cubic-bezier(0.2, 0.8, 0.2, 1), opacity ${duration}`;
-    card.style.transform = `translateY(-100px) translateX(100px) rotate(20deg) opacity(0)`;
+    card.style.transform = `translateY(-70px) translateX(80px) rotate(14deg)`;
     card.style.opacity = '0';
     card.style.pointerEvents = 'none';
-    
+
     currentCardIndex--;
-    
-    stackCards.forEach((c, i) => {
-      if (i <= currentCardIndex) {
-        const reverseIndex = currentCardIndex - i;
-        c.style.transform = `translateY(${reverseIndex * 8}px) scale(${1 - reverseIndex * 0.05}) rotate(${reverseIndex % 2 === 0 ? reverseIndex : -reverseIndex}deg)`;
-      }
-    });
 
     if (currentCardIndex < 0) {
       setTimeout(() => {
         currentCardIndex = stackCards.length - 1;
-        stackCards.forEach((c, i) => {
-          const reverseIndex = stackCards.length - 1 - i;
+        stackCards.forEach((c) => {
           c.style.transition = 'none';
-          c.style.transform = `translateY(${reverseIndex * 8}px) scale(${1 - reverseIndex * 0.05}) rotate(${reverseIndex % 2 === 0 ? reverseIndex : -reverseIndex}deg)`;
-          c.style.opacity = '1';
-          c.style.pointerEvents = 'auto';
-          
-          void c.offsetWidth; // Reflow
+        });
+        updateCardTransforms();
+        void card.offsetWidth;
+        stackCards.forEach((c) => {
           c.style.transition = `transform ${duration} cubic-bezier(0.2, 0.8, 0.2, 1), opacity ${duration}`;
         });
-      }, prefersReducedMotion ? 100 : 600);
+      }, prefersReducedMotion ? 100 : 500);
+    } else {
+      updateCardTransforms();
     }
   }
 }

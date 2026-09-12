@@ -2,9 +2,9 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Untuk Biu. 2017 — ∞</title>
-  <meta name="description" content="Sebuah cerita tentang kita.">
+  <meta name="description" content="Sebuah cerita tentang kita. 2017 — ∞">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,13 +13,37 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+  <!-- Floating Minimal Audio Toggle -->
+  <aside class="audio-control-wrapper">
+    <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Putar musik latar" title="Musik latar">
+      <svg class="music-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13"></path>
+        <circle cx="6" cy="18" r="3"></circle>
+        <circle cx="18" cy="16" r="3"></circle>
+      </svg>
+      <span class="music-label">lagu</span>
+      <span class="music-bars" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </span>
+    </button>
+    <audio id="bgmAudio" preload="none">
+      <source src="/audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+  </aside>
   
   <main class="story-container">
     <!-- 1) OPENING -->
-    <section class="section opening vh-100 flex-center">
+    <section class="section opening vh-100 flex-center" id="opening">
       <div class="opening-content fade-in-up">
-        <div class="botanical-accent tiny-sprout">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wind"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+        <div class="botanical-accent tiny-sprout" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22V12"></path>
+            <path d="M12 12C12 7 7 4 2 5C2 10 6 13 12 12Z"></path>
+            <path d="M12 15C12 11 16 9 21 10C21 14 17 17 12 15Z"></path>
+          </svg>
         </div>
         <h1>untuk Biu.</h1>
         <p class="subtitle">sedikit cerita tentang kita.</p>
@@ -31,164 +55,481 @@
       </div>
     </section>
 
-    <!-- 2) 2017 — THE BEGINNING -->
-    <section class="section the-beginning">
+    <!-- 2) 2017 — FIRST MEETING -->
+    <section class="section the-beginning" id="year-2017">
       <div class="content-wrapper asymmetric-left">
         <h2 class="display-year">2017</h2>
         <p class="editorial-text">awalnya cuma dua orang random di internet.</p>
-        <p class="editorial-text italic">terus entah gimana, jadi sejauh ini.</p>
       </div>
-      <div class="photo-wrapper offset-right parallax">
-        <div class="photo-placeholder" style="aspect-ratio: 3/4;">
-          <!-- <img src="./your-image.jpg" alt="2017" loading="lazy"> -->
-          <span>2017</span>
+      <div class="photo-wrapper offset-right parallax mt-8">
+        <div class="photo-frame portrait-photo">
+          <img src="/memories/2017/first-meeting.webp" alt="2017 — Pertama kali ketemu" loading="lazy" class="memory-media">
+          <div class="photo-placeholder-tag">
+            <span class="tag-year">2017</span>
+            <span class="tag-name">first-meeting.webp</span>
+          </div>
+        </div>
+      </div>
+      <div class="content-wrapper asymmetric-left mt-8">
+        <p class="editorial-text italic">terus ternyata kita beneran ketemu.</p>
+      </div>
+    </section>
+
+    <!-- 3) 2018 — FIRST VIDEO CALL -->
+    <section class="section discovered-memory" id="year-2018">
+      <div class="content-wrapper quiet-padding">
+        <div class="discovered-card offset-left">
+          <h3 class="display-year small-year">2018</h3>
+          <p class="editorial-text">video call pertama kita.</p>
+          <div class="photo-wrapper mt-6">
+            <div class="photo-frame small-photo">
+              <img src="/memories/2018/first-video-call.webp" alt="2018 — Video call pertama" loading="lazy" class="memory-media">
+              <div class="photo-placeholder-tag">
+                <span class="tag-year">2018</span>
+                <span class="tag-name">first-video-call.webp</span>
+              </div>
+            </div>
+          </div>
+          <p class="editorial-text italic text-muted text-sm mt-4">ternyata ada fotonya :)</p>
         </div>
       </div>
     </section>
 
-    <!-- 3) 2017→2020 MEMORY YEARS -->
-    <section class="section memory-years">
-      <div class="timeline-scroll">
-        <div class="memory-item left">
-          <p class="year-label">2017</p>
-          <div class="photo-placeholder small-photo"><span>2017</span></div>
-        </div>
-        <div class="memory-item right margin-top-lg">
-          <p class="year-label">2018</p>
-          <div class="photo-placeholder small-photo"><span>2018</span></div>
-        </div>
-        <div class="memory-item left margin-top-xl">
-          <p class="year-label">2019</p>
-          <div class="photo-placeholder small-photo"><span>2019</span></div>
-        </div>
-        <div class="memory-item center margin-top-xxl">
-          <p class="year-label">2020</p>
-          <div class="photo-placeholder landscape-photo"><span>2020</span></div>
-          <p class="caption mt-4">somehow, we stayed.</p>
+    <!-- 4) 2020 — WHEN WE DIDN'T HAVE MUCH (BANDUNG + CAR DATE) -->
+    <section class="section hard-times" id="year-2020">
+      <!-- First Bandung Date -->
+      <div class="content-wrapper mb-16">
+        <h3 class="place-name">Bandung, Maret 2020.</h3>
+        <p class="editorial-text mb-6">pertama kali kita ke sini bareng.</p>
+        <div class="photo-wrapper">
+          <div class="photo-frame large-photo">
+            <img src="/memories/2020/bandung-first-date.webp" alt="Bandung, Maret 2020" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">Maret 2020</span>
+              <span class="tag-name">bandung-first-date.webp</span>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- 4) WHEN WE DIDN'T HAVE MUCH -->
-    <section class="section hard-times">
-      <div class="content-wrapper text-center quiet-padding">
-        <div class="photo-placeholder square-photo mx-auto mb-8"><span>hard-times</span></div>
+      <!-- Car Date -->
+      <div class="content-wrapper offset-right mb-20">
+        <div class="photo-wrapper">
+          <div class="photo-frame square-photo">
+            <img src="/memories/2020/car-date.webp" alt="2020 — Car date" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">2020</span>
+              <span class="tag-name">car-date.webp</span>
+            </div>
+          </div>
+        </div>
+        <p class="photo-caption text-sm mt-3">nggak semua date harus ke mana-mana ternyata.</p>
+      </div>
+
+      <!-- Emotional Context -->
+      <div class="content-wrapper quiet-padding text-left">
         <p class="editorial-text">Waktu itu kita belum punya banyak.</p>
-        <p class="editorial-text mt-2">Belum punya pekerjaan. Belum punya penghasilan.</p>
-        <p class="editorial-text mt-2">Kadang buat bisa ketemu aja, kita cuma ngandelin tabungan masing-masing.</p>
-        <p class="editorial-text mt-6">Tapi entah gimana, kita tetap nemuin cara buat ketemu.</p>
+        <p class="editorial-text mt-4">Belum punya pekerjaan.<br>Belum punya penghasilan.</p>
+        <p class="editorial-text mt-4">Kadang buat bisa ketemu aja,<br>kita cuma ngandelin tabungan masing-masing.</p>
+        <p class="editorial-text mt-6">Tapi entah gimana,<br>kita tetap nemuin cara buat ketemu.</p>
       </div>
       
       <div class="vh-50 flex-center">
-        <p class="editorial-text emphasis">punya sedikit nggak pernah bikin waktu kita terasa sedikit.</p>
+        <p class="editorial-text emphasis text-center">punya sedikit nggak pernah bikin waktu kita terasa sedikit.</p>
       </div>
     </section>
 
-    <!-- 5) 2021 — WE BECAME US -->
-    <section class="section became-us">
-      <div class="botanical-accent sunflower-bloom">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <!-- 5) 2021 — FINALLY US -->
+    <section class="section became-us" id="year-2021">
+      <div class="botanical-accent sunflower-bloom" aria-hidden="true">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4.5"></circle>
+          <path d="M12 2v3m0 14v3M2 12h3m14 0h3"></path>
+          <path d="m4.93 4.93 2.12 2.12m9.9 9.9 2.12 2.12M4.93 19.07l2.12-2.12m9.9-9.9 2.12-2.12"></path>
+          <circle cx="12" cy="12" r="2" fill="currentColor" fill-opacity="0.2"></circle>
+        </svg>
       </div>
       <div class="content-wrapper text-center mb-8">
         <h2 class="display-year massive">2021</h2>
         <p class="editorial-text">akhirnya jadi kita.</p>
-        <p class="editorial-text italic text-muted">took us 4 years btw.</p>
+        <p class="editorial-text italic text-muted mt-2">took us 4 years btw.</p>
       </div>
       <div class="photo-wrapper hero-full">
-        <div class="photo-placeholder hero-photo"><span>2021-hero</span></div>
+        <div class="photo-frame hero-photo">
+          <img src="/memories/2021/relationship-hero.webp" alt="2021 — Akhirnya jadi kita" loading="lazy" class="memory-media">
+          <div class="photo-placeholder-tag">
+            <span class="tag-year">2021</span>
+            <span class="tag-name">relationship-hero.webp</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 6) PLACES WE'VE CALLED OURS -->
-    <section class="section places">
-      <div class="content-wrapper">
-        <h3 class="section-title mb-12">tempat-tempat yang jadi bagian dari kita.</h3>
+    <!-- 6) 2022 — JOGJA + JAKARTA -->
+    <section class="section places" id="year-2022">
+      <!-- Jogja -->
+      <div class="place-group jogja mb-24">
+        <div class="content-wrapper mb-6">
+          <h3 class="place-name">Jogja, September 2022.</h3>
+        </div>
         
-        <!-- Bandung -->
-        <div class="place-group bandung mb-20">
-          <h4 class="place-name">BANDUNG</h4>
-          <div class="photo-wrapper offset-left parallax-slow">
-            <div class="photo-placeholder large-photo"><span>Bandung 1</span></div>
-          </div>
-          <div class="photo-wrapper offset-right overlapping z-10 mt-n10">
-            <div class="photo-placeholder small-photo"><span>Bandung 2</span></div>
-            <p class="photo-caption">entah kenapa ujung-ujungnya Bandung lagi.</p>
+        <div class="photo-wrapper offset-left parallax-slow mb-6">
+          <div class="photo-frame large-photo landscape-photo">
+            <img src="/memories/2022/jogja/hero.webp" alt="Jogja, September 2022" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">Jogja 2022</span>
+              <span class="tag-name">hero.webp</span>
+            </div>
           </div>
         </div>
 
-        <!-- Jogja -->
-        <div class="place-group jogja mb-20">
-          <h4 class="place-name text-right">JOGJA</h4>
-          <div class="photo-wrapper offset-right parallax-slow">
-            <div class="photo-placeholder large-photo landscape-photo"><span>Jogja 1</span></div>
+        <div class="photo-wrapper offset-right overlapping z-10 mb-8">
+          <div class="photo-frame portrait-photo">
+            <img src="/memories/2022/jogja/memory-01.webp" alt="Jogja memory" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">Jogja</span>
+              <span class="tag-name">memory-01.webp</span>
+            </div>
           </div>
-          <div class="photo-wrapper offset-left overlapping z-10 mt-n8">
-            <div class="photo-placeholder small-photo portrait-photo"><span>Jogja 2</span></div>
-            <p class="photo-caption text-left">selalu pengen balik lagi ke sini.</p>
+          <p class="photo-caption text-left mt-3">selalu pengen balik lagi ke sini.</p>
+        </div>
+
+        <!-- Jogja Video -->
+        <div class="content-wrapper mt-8">
+          <div class="video-frame landscape-video">
+            <video playsinline preload="metadata" controls poster="/memories/2022/jogja/hero.webp" class="memory-video">
+              <source src="/memories/2022/jogja/date-video.mp4" type="video/mp4">
+            </video>
+            <div class="video-placeholder-tag">
+              <span class="tag-year">Jogja Clip</span>
+              <span class="tag-name">date-video.mp4</span>
+            </div>
+            <div class="video-play-overlay">
+              <div class="play-badge">▶</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jakarta -->
+      <div class="place-group jakarta mb-16">
+        <div class="content-wrapper mb-6">
+          <h3 class="place-name">Jakarta, Desember 2022.</h3>
+        </div>
+
+        <div class="photo-wrapper asymmetric-left mb-6">
+          <div class="photo-frame square-photo">
+            <img src="/memories/2022/jakarta/memory.webp" alt="Jakarta, Desember 2022" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">Jakarta</span>
+              <span class="tag-name">memory.webp</span>
+            </div>
           </div>
         </div>
 
-        <!-- Other Cities Collage -->
-        <div class="collage-wrapper mt-16 scroll-horizontal">
-          <div class="collage-track">
-            <div class="photo-placeholder collage-photo"><span>Jakarta</span></div>
-            <div class="photo-placeholder collage-photo mt-8"><span>Bogor</span></div>
-            <div class="photo-placeholder collage-photo mt-n4"><span>Semarang</span></div>
-            <div class="photo-placeholder collage-photo mt-12"><span>Surabaya</span></div>
+        <div class="content-wrapper offset-right">
+          <div class="video-frame portrait-video">
+            <video playsinline preload="metadata" controls poster="/memories/2022/jakarta/memory.webp" class="memory-video">
+              <source src="/memories/2022/jakarta/date-video.mp4" type="video/mp4">
+            </video>
+            <div class="video-placeholder-tag">
+              <span class="tag-year">Jakarta Clip</span>
+              <span class="tag-name">date-video.mp4</span>
+            </div>
+            <div class="video-play-overlay">
+              <div class="play-badge">▶</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 7) 2024 — BIU'S WORLD -->
-    <section class="section bius-world">
+    <!-- 7) 2024 — BIU BECOMES PART OF KAKA'S WORLD -->
+    <section class="section bius-world" id="year-2024">
       <div class="content-wrapper quiet-padding">
         <h2 class="display-year">2024</h2>
-        <div class="photo-placeholder portrait-photo mx-auto mt-8 mb-8"><span>2024 family/hometown</span></div>
-        <p class="editorial-text text-center mt-8">2024 juga jadi tahun Kaka mulai kenal dunia Biu lebih jauh.</p>
-        <p class="editorial-text text-center mt-2">Bukan cuma Biu yang Kaka kenal sekarang, tapi juga rumah, keluarga, dan orang-orang yang jadi bagian dari hidup Biu.</p>
-        <p class="editorial-text text-center mt-2">Dan jujur, Kaka seneng bisa ikut kenal bagian itu.</p>
+        <p class="editorial-text mt-4 mb-8">pelan-pelan, Biu juga jadi bagian dari dunia Kaka.</p>
+        
+        <div class="photo-wrapper">
+          <div class="photo-frame portrait-photo mx-auto">
+            <img src="/memories/2024/family-dinner.webp" alt="Februari 2024 — Keluarga Kaka" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">Februari 2024</span>
+              <span class="tag-name">family-dinner.webp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <p class="editorial-text">dan entah kapan tepatnya,<br>ini mulai terasa biasa.</p>
+          <p class="editorial-text italic text-muted mt-2">in a good way.</p>
+        </div>
       </div>
     </section>
 
-    <!-- 8) RANDOM / RECEH MEMORIES -->
-    <section class="section random-memories overflow-hidden">
+    <!-- 8) 2025 — BIU GROWING (HER OWN PERSON) -->
+    <section class="section biu-growing" id="year-2025-career">
+      <div class="content-wrapper quiet-padding">
+        <div class="botanical-accent sprout-accent mb-6" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22V8"></path>
+            <path d="M12 8C12 4 8 2 4 3C4 8 8 10 12 8Z"></path>
+            <path d="M12 12C12 9 16 7 20 8C20 12 16 14 12 12Z"></path>
+          </svg>
+        </div>
+        <p class="editorial-text italic text-muted mb-12">terus ada Biu sendiri.</p>
+        
+        <!-- Career progression sequence -->
+        <div class="career-sequence">
+          <div class="career-step offset-left mb-16">
+            <div class="photo-wrapper">
+              <div class="photo-frame small-photo">
+                <img src="/memories/2025/career/journey-01.webp" alt="Biu career journey 1" loading="lazy" class="memory-media">
+                <div class="photo-placeholder-tag">
+                  <span class="tag-year">journey</span>
+                  <span class="tag-name">journey-01.webp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="career-step offset-right mb-20">
+            <div class="photo-wrapper">
+              <div class="photo-frame portrait-photo">
+                <img src="/memories/2025/career/journey-02.webp" alt="Biu career journey 2" loading="lazy" class="memory-media">
+                <div class="photo-placeholder-tag">
+                  <span class="tag-year">journey</span>
+                  <span class="tag-name">journey-02.webp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certification Payoff -->
+          <div class="career-payoff text-center mb-16">
+            <h3 class="display-year small-year mb-4">Februari 2025</h3>
+            <div class="photo-wrapper mx-auto mb-6">
+              <div class="photo-frame large-photo landscape-photo mx-auto">
+                <img src="/memories/2025/career/massage-certification.webp" alt="Februari 2025 — Massage Certification" loading="lazy" class="memory-media">
+                <div class="photo-placeholder-tag">
+                  <span class="tag-year">Februari 2025</span>
+                  <span class="tag-name">massage-certification.webp</span>
+                </div>
+              </div>
+            </div>
+            <p class="editorial-text">satu langkah lagi.</p>
+          </div>
+
+          <div class="quiet-padding text-center">
+            <p class="editorial-text">Kaka tahu Biu masih punya banyak hal yang pengen dicapai.</p>
+            <p class="editorial-text mt-4">tapi yang ini...</p>
+            <p class="editorial-text emphasis mt-4">Kaka bangga banget sama Biu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9) DECEMBER 2025 — BALI -->
+    <section class="section bali-reset" id="year-2025-bali">
+      <div class="photo-wrapper hero-full">
+        <div class="photo-frame hero-photo">
+          <img src="/memories/2025/bali/hero.webp" alt="Bali, Desember 2025" loading="lazy" class="memory-media">
+          <div class="photo-placeholder-tag">
+            <span class="tag-year">Desember 2025</span>
+            <span class="tag-name">bali/hero.webp</span>
+          </div>
+        </div>
+      </div>
+      <div class="content-wrapper mt-6">
+        <p class="place-name">Bali, Desember 2025.</p>
+      </div>
+    </section>
+
+    <!-- 10) RANDOM / ORDINARY MEMORIES (INTERACTIVE STACK) -->
+    <section class="section random-memories overflow-hidden" id="random-stack">
       <div class="content-wrapper">
         <h3 class="section-title mb-8 text-center">foto-foto yang sebenernya nggak perlu dipamerin.</h3>
         
-        <!-- Interactive Stack -->
+        <!-- Interactive Stack (7 Cards) -->
         <div class="card-stack-container" id="photoStack">
           <div class="stack-card">
-            <div class="photo-placeholder square-photo"><span>random stack 1</span></div>
+            <div class="photo-frame square-photo">
+              <img src="/memories/random/random-01.webp" alt="Random 01" loading="lazy" class="memory-media">
+              <div class="photo-placeholder-tag"><span class="tag-name">random-01.webp</span></div>
+            </div>
             <p class="caption">biu cakep. kaka questionable.</p>
           </div>
           <div class="stack-card">
-            <div class="photo-placeholder square-photo"><span>random stack 2</span></div>
+            <div class="photo-frame square-photo">
+              <img src="/memories/random/random-02.webp" alt="Random 02" loading="lazy" class="memory-media">
+              <div class="photo-placeholder-tag"><span class="tag-name">random-02.webp</span></div>
+            </div>
             <p class="caption">probably habis makan.</p>
           </div>
           <div class="stack-card">
-            <div class="photo-placeholder square-photo"><span>random stack 3</span></div>
+            <div class="photo-frame square-photo">
+              <img src="/memories/random/random-03.webp" alt="Random 03" loading="lazy" class="memory-media">
+              <div class="photo-placeholder-tag"><span class="tag-name">random-03.webp</span></div>
+            </div>
             <p class="caption">ini kenapa ya.</p>
           </div>
           <div class="stack-card">
-            <div class="photo-placeholder square-photo"><span>random stack 4</span></div>
+            <div class="photo-frame square-photo">
+              <img src="/memories/random/random-04.webp" alt="Random 04" loading="lazy" class="memory-media">
+              <div class="photo-placeholder-tag"><span class="tag-name">random-04.webp</span></div>
+            </div>
             <p class="caption">would still date.</p>
           </div>
+          <div class="stack-card">
+            <div class="photo-frame square-photo">
+              <img src="/memories/random/random-05.webp" alt="Random 05" loading="lazy" class="memory-media">
+              <div class="photo-placeholder-tag"><span class="tag-name">random-05.webp</span></div>
+            </div>
+            <p class="caption">somehow masih disimpan.</p>
+          </div>
+          <div class="stack-card">
+            <div class="photo-frame square-photo">
+              <img src="/memories/random/random-06.webp" alt="Random 06" loading="lazy" class="memory-media">
+              <div class="photo-placeholder-tag"><span class="tag-name">random-06.webp</span></div>
+            </div>
+            <p class="caption">no comment.</p>
+          </div>
+          <div class="stack-card">
+            <div class="photo-frame square-photo">
+              <img src="/memories/random/random-07.webp" alt="Random 07" loading="lazy" class="memory-media">
+              <div class="photo-placeholder-tag"><span class="tag-name">random-07.webp</span></div>
+            </div>
+            <p class="caption">ini harusnya nggak masuk website.</p>
+          </div>
         </div>
-        <p class="instruction-text text-center text-muted mt-4 text-sm italic">tap or swipe</p>
+        <p class="instruction-text text-center text-muted mt-6 text-sm italic">tap foto untuk buka berikutnya</p>
+      </div>
+    </section>
+
+    <!-- 11) VIDEO CALL MEMORIES / LDR -->
+    <section class="section ldr-memories" id="video-calls">
+      <div class="content-wrapper">
+        <p class="editorial-text italic text-muted mb-8">somewhere in between all of this...</p>
         
-        <!-- Masonry -->
-        <div class="masonry-grid mt-16">
-          <div class="photo-placeholder masonry-item tall"><span>masonry 1</span></div>
-          <div class="photo-placeholder masonry-item short mt-12"><span>masonry 2</span></div>
-          <div class="photo-placeholder masonry-item short"><span>masonry 3</span></div>
-          <div class="photo-placeholder masonry-item tall mt-n8 video-placeholder"><span>short video</span><div class="play-icon">▶</div></div>
+        <div class="filmstrip-container">
+          <div class="filmstrip-item mb-6">
+            <div class="video-frame portrait-video">
+              <video playsinline preload="metadata" controls class="memory-video">
+                <source src="/memories/video-calls/vc-01.mp4" type="video/mp4">
+              </video>
+              <div class="video-placeholder-tag">
+                <span class="tag-year">Video Call</span>
+                <span class="tag-name">vc-01.mp4</span>
+              </div>
+              <div class="video-play-overlay"><div class="play-badge">▶</div></div>
+            </div>
+          </div>
+
+          <div class="filmstrip-item offset-right mb-6">
+            <div class="video-frame portrait-video">
+              <video playsinline preload="metadata" controls class="memory-video">
+                <source src="/memories/video-calls/vc-02.mp4" type="video/mp4">
+              </video>
+              <div class="video-placeholder-tag">
+                <span class="tag-year">Video Call</span>
+                <span class="tag-name">vc-02.mp4</span>
+              </div>
+              <div class="video-play-overlay"><div class="play-badge">▶</div></div>
+            </div>
+          </div>
+
+          <div class="filmstrip-item asymmetric-left mb-6">
+            <div class="video-frame portrait-video">
+              <video playsinline preload="metadata" controls class="memory-video">
+                <source src="/memories/video-calls/vc-03.mp4" type="video/mp4">
+              </video>
+              <div class="video-placeholder-tag">
+                <span class="tag-year">Video Call</span>
+                <span class="tag-name">vc-03.mp4</span>
+              </div>
+              <div class="video-play-overlay"><div class="play-badge">▶</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiet-padding text-center">
+          <p class="editorial-text">banyak waktu kita ternyata<br>habis di layar juga.</p>
         </div>
       </div>
     </section>
 
-    <!-- 9) BIU, 26 -->
-    <section class="section biu-26">
+    <!-- 12) FEBRUARY 2026 — LAST PHOTO TOGETHER, FOR NOW -->
+    <section class="section last-together" id="year-2026-feb">
+      <div class="content-wrapper">
+        <h2 class="display-year">Februari 2026.</h2>
+        <div class="photo-wrapper mt-8 mb-6">
+          <div class="photo-frame portrait-photo mx-auto">
+            <img src="/memories/2026/feb-last-together.webp" alt="Februari 2026 — Terakhir ketemu" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">Februari 2026</span>
+              <span class="tag-name">feb-last-together.webp</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-6">
+          <p class="editorial-text">terakhir kali kita ketemu,</p>
+          <p class="editorial-text italic text-muted mt-2">untuk sekarang.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13) APRIL 2026 — BIU'S GARDEN -->
+    <section class="section bius-garden" id="year-2026-april">
+      <div class="content-wrapper quiet-padding">
+        <h2 class="display-year small-year">April 2026.</h2>
+        <div class="photo-wrapper mt-8 mb-8">
+          <div class="photo-frame large-photo mx-auto">
+            <img src="/memories/2026/april-garden.webp" alt="April 2026 — Kebun Biu" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">April 2026</span>
+              <span class="tag-name">april-garden.webp</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="botanical-accent garden-accent my-6" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22v-9"></path>
+            <path d="M9 13a4 4 0 0 1 6 0"></path>
+            <path d="M12 4a3 3 0 0 0-3 3c0 2 3 5 3 5s3-3 3-5a3 3 0 0 0-3-3z"></path>
+          </svg>
+        </div>
+
+        <p class="editorial-text">dari semua bunga yang Kaka taruh di website ini...</p>
+        <p class="editorial-text italic mt-2">ternyata Biu punya kebun sendiri.</p>
+
+        <div class="vh-50 flex-center">
+          <p class="editorial-text emphasis text-center">Kaka suka lihat Biu punya sesuatu yang Biu rawat sendiri.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14) JULY 2026 — BIU + NIECE/NEPHEW -->
+    <section class="section biu-niece" id="year-2026-july">
+      <div class="content-wrapper quiet-padding">
+        <div class="photo-wrapper offset-right mb-6">
+          <div class="photo-frame portrait-photo">
+            <img src="/memories/2026/july-niece-nephew.webp" alt="Juli 2026 — Biu" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">Juli 2026</span>
+              <span class="tag-name">july-niece-nephew.webp</span>
+            </div>
+          </div>
+        </div>
+        <div class="offset-right">
+          <h3 class="place-name">Juli 2026.</h3>
+          <p class="editorial-text italic text-muted text-sm mt-1">Biu being Biu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15) BIU, 26 -->
+    <section class="section biu-26" id="biu-26">
       <div class="content-wrapper">
         <h2 class="display-huge">26.</h2>
         <h3 class="display-large mt-2">Biu, 26.</h3>
@@ -201,81 +542,142 @@
             <p class="editorial-text text-center">semoga makin banyak hal yang bikin mata Biu berbinar.</p>
           </div>
           <div class="wish-block vh-50 flex-center">
-            <p class="editorial-text text-center">semoga mimpi Biu jadi wellness practitioner pelan-pelan makin nyata.</p>
+            <p class="editorial-text text-center">semoga semua yang selama ini Biu bangun pelan-pelan mulai menemukan tempatnya.</p>
           </div>
           <div class="wish-block vh-50 flex-center">
-            <p class="editorial-text text-center emphasis">dan yang paling sederhana... Kaka cuma pengen Biu bahagia.</p>
+            <p class="editorial-text text-center emphasis">dan yang paling sederhana...<br>Kaka cuma pengen Biu bahagia.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 10) SIGNATURE FUTURE SECTION -->
-    <section class="section signature-future">
-      <div class="content-wrapper">
-        <div class="photo-placeholder hero-photo mx-auto mb-8"><span>2026-present</span></div>
-        <p class="editorial-text text-center">sampai sini... Kaka masih punya fotonya.</p>
+    <!-- 16) SIGNATURE FUTURE SECTION -->
+    <section class="section signature-future" id="future">
+      <div class="content-wrapper text-center mb-12">
+        <p class="editorial-text">selama ini,<br>ternyata banyak banget fotonya.</p>
+      </div>
+
+      <!-- Quick Irregular Contact Sheet of Past Memories -->
+      <div class="contact-sheet mb-16">
+        <div class="contact-grid">
+          <div class="contact-thumb">
+            <img src="/memories/2017/first-meeting.webp" alt="2017" loading="lazy" class="memory-media">
+            <span>2017</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="/memories/2018/first-video-call.webp" alt="2018" loading="lazy" class="memory-media">
+            <span>2018</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="/memories/2020/bandung-first-date.webp" alt="2020" loading="lazy" class="memory-media">
+            <span>2020</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="/memories/2021/relationship-hero.webp" alt="2021" loading="lazy" class="memory-media">
+            <span>2021</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="/memories/2022/jogja/hero.webp" alt="2022" loading="lazy" class="memory-media">
+            <span>2022</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="/memories/2024/family-dinner.webp" alt="2024" loading="lazy" class="memory-media">
+            <span>2024</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="/memories/2025/career/massage-certification.webp" alt="2025" loading="lazy" class="memory-media">
+            <span>2025</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="/memories/2026/feb-last-together.webp" alt="2026" loading="lazy" class="memory-media">
+            <span>2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Landing on February 2026 couple photo -->
+      <div class="content-wrapper mb-12">
+        <div class="photo-wrapper hero-full mb-6">
+          <div class="photo-frame hero-photo">
+            <img src="/memories/2026/feb-last-together.webp" alt="Februari 2026" loading="lazy" class="memory-media">
+            <div class="photo-placeholder-tag">
+              <span class="tag-year">Februari 2026</span>
+              <span class="tag-name">feb-last-together.webp</span>
+            </div>
+          </div>
+        </div>
+        <p class="editorial-text text-center">dan ini foto kita yang paling terakhir.</p>
       </div>
 
       <div class="vh-50 flex-center scroll-fade">
-        <p class="editorial-text text-center">tapi setelah ini...</p>
+        <p class="editorial-text text-center italic">untuk sekarang.</p>
       </div>
       <div class="vh-50 flex-center scroll-fade">
-        <p class="editorial-text text-center">Kaka nggak punya fotonya lagi.</p>
+        <p class="editorial-text text-center">tapi Kaka tahu<br>ini bukan foto terakhir kita.</p>
       </div>
       <div class="vh-50 flex-center scroll-fade mb-16">
-        <p class="editorial-text text-center italic">karena kita belum mengambilnya.</p>
+        <p class="editorial-text text-center italic">karena masih banyak<br>yang belum kita ambil.</p>
       </div>
 
-      <!-- Empty Frames -->
+      <!-- Empty Physical / Editorial Frames -->
       <div class="future-frames">
-        <div class="frame-group asymmetric-left mb-20">
+        <!-- Australia -->
+        <div class="frame-group asymmetric-left mb-24">
           <div class="empty-frame portrait-frame">
             <span class="frame-text">foto belum ada.</span>
           </div>
           <p class="frame-caption">Australia</p>
         </div>
 
-        <div class="frame-group offset-right mb-24">
-          <div class="empty-frame landscape-frame"></div>
+        <!-- Wedding -->
+        <div class="frame-group offset-right mb-28">
+          <div class="empty-frame landscape-frame rotate-subtle-right"></div>
           <p class="frame-caption">nanti, foto kita di hari itu.</p>
         </div>
 
-        <div class="frame-group asymmetric-left mb-24">
-          <div class="empty-frame square-frame"></div>
+        <!-- First Home -->
+        <div class="frame-group asymmetric-left mb-28">
+          <div class="empty-frame square-frame rotate-subtle-left"></div>
           <p class="frame-caption">our first home.</p>
           <p class="frame-subcaption">probably berantakan.</p>
         </div>
 
-        <div class="frame-group text-center mx-auto mb-24">
+        <!-- Biu's Wellness Practice -->
+        <div class="frame-group text-center mx-auto mb-28">
           <div class="empty-frame large-portrait-frame"></div>
           <p class="frame-caption mt-4">tempat Biu membangun mimpinya.</p>
         </div>
 
+        <!-- Family -->
         <div class="frame-group text-center mx-auto mb-32">
-          <div class="empty-frame panoramic-frame"></div>
-          <p class="frame-caption mt-4">keluarga kita nanti</p>
+          <div class="empty-frame panoramic-frame rotate-subtle-right"></div>
+          <p class="frame-caption mt-4">keluarga kita nanti.</p>
           <p class="frame-subcaption">mungkin nanti fotonya lebih rame.</p>
         </div>
       </div>
 
+      <!-- Growth returns -->
       <div class="vh-50 flex-center flex-column text-center mt-16">
-        <div class="botanical-accent new-sprout mb-6">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wind"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+        <div class="botanical-accent new-sprout mb-6" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22V12"></path>
+            <path d="M12 12C12 7 7 4 2 5C2 10 6 13 12 12Z"></path>
+            <path d="M12 15C12 11 16 9 21 10C21 14 17 17 12 15Z"></path>
+          </svg>
         </div>
-        <p class="editorial-text">masih banyak yang kosong.</p>
+        <p class="editorial-text">masih kosong.</p>
         <p class="editorial-text mt-2">nggak apa-apa.</p>
-        <p class="editorial-text mt-2">kita isi pelan-pelan.</p>
+        <p class="editorial-text emphasis mt-4">nanti kita ambil fotonya.</p>
       </div>
     </section>
 
-    <!-- 11) LETTER -->
-    <section class="section letter-section vh-100 flex-center">
+    <!-- 17) LETTER -->
+    <section class="section letter-section vh-100 flex-center" id="letter">
       <button id="openLetterBtn" class="letter-reveal-btn">Untuk Biu</button>
       
-      <div id="letterOverlay" class="letter-overlay hidden">
+      <div id="letterOverlay" class="letter-overlay hidden" role="dialog" aria-modal="true" aria-label="Surat untuk Biu">
         <div class="letter-paper">
-          <button id="closeLetterBtn" class="close-btn">&times;</button>
+          <button id="closeLetterBtn" class="close-btn" aria-label="Tutup surat">&times;</button>
           <div class="letter-content">
             <p>Biu,</p>
             <p>kadang Kaka masih suka mikir lucu juga ya.</p>
@@ -297,10 +699,13 @@
       </div>
     </section>
 
-    <!-- 12) FINAL SCREEN -->
-    <section class="section final-screen vh-100 flex-center">
+    <!-- 18) FINAL SCREEN -->
+    <section class="section final-screen vh-100 flex-center" id="final">
       <div class="final-backdrop">
-        <div class="photo-placeholder ending-photo"><span>ending-photo</span></div>
+        <div class="ending-photo">
+          <img src="/memories/ending/final.webp" alt="Selamat Ulang Tahun Biu" loading="lazy" class="memory-media">
+          <div class="photo-placeholder-tag"><span class="tag-name">ending/final.webp</span></div>
+        </div>
       </div>
       <div class="final-content text-center z-10 mix-blend-diff">
         <h2 class="display-large mb-4">Selamat ulang tahun, Biu.</h2>

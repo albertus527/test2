@@ -4,7 +4,7 @@ export function initScrollReveals() {
   const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15
+    threshold: 0.12
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -16,7 +16,7 @@ export function initScrollReveals() {
   }, observerOptions);
 
   const revealElements = document.querySelectorAll(
-    '.opening-content, .photo-wrapper, .scroll-fade, .memory-item, .frame-group, .wish-block p'
+    '.opening-content, .photo-wrapper, .scroll-fade, .memory-item, .frame-group, .wish-block p, .editorial-block, .career-step, .filmstrip-item, .contact-sheet'
   );
   
   revealElements.forEach(el => {
@@ -24,9 +24,8 @@ export function initScrollReveals() {
       el.classList.add('fade-in-up');
     }
     
-    // If user prefers reduced motion, we can either instantly show or still fade
     if (prefersReducedMotion) {
-      el.style.transitionDuration = '0.1s';
+      el.style.transitionDuration = '0.05s';
     }
     
     observer.observe(el);
