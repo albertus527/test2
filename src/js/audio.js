@@ -12,7 +12,15 @@ export function initAudio() {
   bgmAudio = document.getElementById('bgmAudio');
   musicToggleBtn = document.getElementById('musicToggleBtn');
 
-  if (!bgmAudio || !musicToggleBtn) return { pauseForVideo: () => {}, resumeAfterVideo: () => {} };
+  if (!bgmAudio || !musicToggleBtn) {
+    return {
+      pauseForVideo: () => {},
+      resumeAfterVideo: () => {}
+    };
+  }
+
+  // Default background music volume = 22%
+  bgmAudio.volume = 0.01;
 
   musicToggleBtn.addEventListener('click', () => {
     if (isPlaying) {

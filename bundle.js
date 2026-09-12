@@ -20,7 +20,7 @@
     if (!bgmAudio || !musicToggleBtn) {
       return { pauseForVideo: function() {}, resumeAfterVideo: function() {} };
     }
-
+    bgmAudio.volume = 0.25;
     musicToggleBtn.addEventListener('click', function() {
       if (isMusicPlaying) {
         pauseMusic();
