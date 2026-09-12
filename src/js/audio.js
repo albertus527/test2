@@ -19,8 +19,8 @@ export function initAudio() {
     };
   }
 
-  // Default background music volume = 22%
-  bgmAudio.volume = 0.01;
+  // Default background music volume = 8%
+  bgmAudio.volume = 0.08;
 
   musicToggleBtn.addEventListener('click', () => {
     if (isPlaying) {

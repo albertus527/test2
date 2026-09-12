@@ -20,7 +20,8 @@
     if (!bgmAudio || !musicToggleBtn) {
       return { pauseForVideo: function() {}, resumeAfterVideo: function() {} };
     }
-    bgmAudio.volume = 0.25;
+    // Default background music volume = 8%
+    bgmAudio.volume = 0.08;
     musicToggleBtn.addEventListener('click', function() {
       if (isMusicPlaying) {
         pauseMusic();
