@@ -30,7 +30,7 @@
       </span>
     </button>
     <audio id="bgmAudio" preload="none">
-      <source src="/audio/bgm.mp3" type="audio/mpeg">
+      <source src="./public/audio/bgm.mp3" type="audio/mpeg">
     </audio>
   </aside>
   
@@ -63,11 +63,7 @@
       </div>
       <div class="photo-wrapper offset-right parallax mt-8">
         <div class="photo-frame portrait-photo">
-          <img src="/memories/2017/first-meeting.webp" alt="2017 — Pertama kali ketemu" loading="lazy" class="memory-media">
-          <div class="photo-placeholder-tag">
-            <span class="tag-year">2017</span>
-            <span class="tag-name">first-meeting.webp</span>
-          </div>
+          <img src="./public/memories/2017/first-meeting.webp" alt="2017 — Pertama kali ketemu" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
         </div>
       </div>
       <div class="content-wrapper asymmetric-left mt-8">
@@ -81,16 +77,22 @@
         <div class="discovered-card offset-left">
           <h3 class="display-year small-year">2018</h3>
           <p class="editorial-text">video call pertama kita.</p>
+          
           <div class="photo-wrapper mt-6">
-            <div class="photo-frame small-photo">
-              <img src="/memories/2018/first-video-call.webp" alt="2018 — Video call pertama" loading="lazy" class="memory-media">
-              <div class="photo-placeholder-tag">
-                <span class="tag-year">2018</span>
-                <span class="tag-name">first-video-call.webp</span>
+            <div class="photo-duo">
+              <div class="photo-wrapper">
+                <div class="photo-frame small-photo">
+                  <img src="./public/memories/2018/first-video-call.webp" alt="2018 — Video call pertama" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+                </div>
+              </div>
+              <div class="photo-wrapper mt-4">
+                <div class="photo-frame small-photo">
+                  <img src="./public/memories/2018/first-video-call2.webp" alt="2018 — Video call kedua" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+                </div>
               </div>
             </div>
           </div>
-          <p class="editorial-text italic text-muted text-sm mt-4">ternyata ada fotonya :)</p>
+          <p class="editorial-text italic text-muted text-sm mt-4">selimut polkadot dijadiin topi, ternyata ada fotonya :)</p>
         </div>
       </div>
     </section>
@@ -101,29 +103,54 @@
       <div class="content-wrapper mb-16">
         <h3 class="place-name">Bandung, Maret 2020.</h3>
         <p class="editorial-text mb-6">pertama kali kita ke sini bareng.</p>
+        
         <div class="photo-wrapper">
           <div class="photo-frame large-photo">
-            <img src="/memories/2020/bandung-first-date.webp" alt="Bandung, Maret 2020" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">Maret 2020</span>
-              <span class="tag-name">bandung-first-date.webp</span>
+            <img src="./public/memories/2020/bandung-first-date.webp" alt="Bandung, Maret 2020 — Kebun Teh" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+          </div>
+          <p class="photo-caption text-sm mt-3">ciee tatap tatapan.</p>
+        </div>
+
+        <div class="photo-duo mt-8">
+          <div class="photo-wrapper">
+            <div class="photo-frame square-photo">
+              <img src="./public/memories/2020/bandung-first-date2.webp" alt="Ranca Upas — Ketemu Rusa" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             </div>
+            <p class="photo-badge-note">ketemu rusa di Ranca Upas.</p>
+          </div>
+          <div class="photo-wrapper mt-4">
+            <div class="photo-frame square-photo">
+              <img src="./public/memories/2020/bandung-first-date3.webp" alt="Lorong Mall Jam 8 Malam" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            </div>
+            <p class="photo-badge-note">lorong mall jam 8 malam (pose aneh Biu).</p>
           </div>
         </div>
       </div>
 
       <!-- Car Date -->
-      <div class="content-wrapper offset-right mb-20">
+      <div class="content-wrapper offset-right mb-16">
         <div class="photo-wrapper">
           <div class="photo-frame square-photo">
-            <img src="/memories/2020/car-date.webp" alt="2020 — Car date" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">2020</span>
-              <span class="tag-name">car-date.webp</span>
-            </div>
+            <img src="./public/memories/2020/car-date.webp" alt="2020 — Car date" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
           </div>
         </div>
-        <p class="photo-caption text-sm mt-3">nggak semua date harus ke mana-mana ternyata.</p>
+      </div>
+
+      <!-- Car Date Video & Extra Photo -->
+      <div class="content-wrapper asymmetric-left mb-20">
+        <div class="video-frame portrait-video mb-8">
+          <video playsinline preload="metadata" controls poster="./public/memories/2020/car-date.webp" class="memory-video">
+            <source src="./public/memories/2020/car-date2.mp4" type="video/mp4">
+          </video>
+          <div class="video-play-overlay"><div class="play-badge">▶</div></div>
+        </div>
+
+        <div class="photo-wrapper offset-right">
+          <div class="photo-frame portrait-photo">
+            <img src="./public/memories/2020/car-date3.webp" alt="Nyender di Bahu di Mobil" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+          </div>
+          <p class="photo-caption text-sm mt-3">nyender di bahu waktu di mobil + nyium ketek hahah.</p>
+        </div>
       </div>
 
       <!-- Emotional Context -->
@@ -154,12 +181,25 @@
         <p class="editorial-text">akhirnya jadi kita.</p>
         <p class="editorial-text italic text-muted mt-2">took us 4 years btw.</p>
       </div>
-      <div class="photo-wrapper hero-full">
+      <div class="photo-wrapper hero-full mb-8">
         <div class="photo-frame hero-photo">
-          <img src="/memories/2021/relationship-hero.webp" alt="2021 — Akhirnya jadi kita" loading="lazy" class="memory-media">
-          <div class="photo-placeholder-tag">
-            <span class="tag-year">2021</span>
-            <span class="tag-name">relationship-hero.webp</span>
+          <img src="./public/memories/2021/relationship-hero.webp" alt="2021 — Akhirnya jadi kita" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+        </div>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="photo-duo mt-8">
+          <div class="photo-wrapper">
+            <div class="photo-frame portrait-photo">
+              <img src="./public/memories/2021/relationship-hero2.webp" alt="Mirror Selfie 2021" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            </div>
+            <p class="photo-badge-note">mirror selfie pertama.</p>
+          </div>
+          <div class="photo-wrapper mt-6">
+            <div class="photo-frame portrait-photo">
+              <img src="./public/memories/2021/relationship-hero3.webp" alt="Jalan Malam di Alun-Alun" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            </div>
+            <p class="photo-badge-note">jalan malam di alun-alun.</p>
           </div>
         </div>
       </div>
@@ -175,39 +215,23 @@
         
         <div class="photo-wrapper offset-left parallax-slow mb-6">
           <div class="photo-frame large-photo landscape-photo">
-            <img src="/memories/2022/jogja/hero.webp" alt="Jogja, September 2022" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">Jogja 2022</span>
-              <span class="tag-name">hero.webp</span>
-            </div>
+            <img src="./public/memories/2022/jogja/hero1.webp" alt="Makan Dimsum di Jogja" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
           </div>
+          <p class="photo-caption text-left mt-3">sibuk banget nih kayanya sama sendok garpu nya hahah</p>
         </div>
 
         <div class="photo-wrapper offset-right overlapping z-10 mb-8">
           <div class="photo-frame portrait-photo">
-            <img src="/memories/2022/jogja/memory-01.webp" alt="Jogja memory" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">Jogja</span>
-              <span class="tag-name">memory-01.webp</span>
-            </div>
+            <img src="./public/memories/2022/jogja/hero2.webp" alt="Makan Semangka Berdua" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
           </div>
-          <p class="photo-caption text-left mt-3">selalu pengen balik lagi ke sini.</p>
+          <p class="photo-caption text-left mt-3">Lucu bangett makan semangka di burjo hihihi.</p>
         </div>
 
-        <!-- Jogja Video -->
-        <div class="content-wrapper mt-8">
-          <div class="video-frame landscape-video">
-            <video playsinline preload="metadata" controls poster="/memories/2022/jogja/hero.webp" class="memory-video">
-              <source src="/memories/2022/jogja/date-video.mp4" type="video/mp4">
-            </video>
-            <div class="video-placeholder-tag">
-              <span class="tag-year">Jogja Clip</span>
-              <span class="tag-name">date-video.mp4</span>
-            </div>
-            <div class="video-play-overlay">
-              <div class="play-badge">▶</div>
-            </div>
+        <div class="photo-wrapper asymmetric-left mb-8">
+          <div class="photo-frame square-photo">
+            <img src="./public/memories/2022/jogja/hero3.webp" alt="Photobooth Efek 3D" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
           </div>
+          <p class="photo-caption text-left mt-3">photobooth efek 3D.</p>
         </div>
       </div>
 
@@ -217,29 +241,16 @@
           <h3 class="place-name">Jakarta, Desember 2022.</h3>
         </div>
 
-        <div class="photo-wrapper asymmetric-left mb-6">
-          <div class="photo-frame square-photo">
-            <img src="/memories/2022/jakarta/memory.webp" alt="Jakarta, Desember 2022" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">Jakarta</span>
-              <span class="tag-name">memory.webp</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="content-wrapper offset-right">
-          <div class="video-frame portrait-video">
-            <video playsinline preload="metadata" controls poster="/memories/2022/jakarta/memory.webp" class="memory-video">
-              <source src="/memories/2022/jakarta/date-video.mp4" type="video/mp4">
+        <div class="content-wrapper">
+          <div class="video-frame portrait-video mx-auto">
+            <video playsinline preload="metadata" controls class="memory-video">
+              <source src="./public/memories/2022/jakarta/date-video.mp4" type="video/mp4">
             </video>
-            <div class="video-placeholder-tag">
-              <span class="tag-year">Jakarta Clip</span>
-              <span class="tag-name">date-video.mp4</span>
-            </div>
             <div class="video-play-overlay">
               <div class="play-badge">▶</div>
             </div>
           </div>
+          <p class="photo-caption text-center mt-3">Aquarium date timee.</p>
         </div>
       </div>
     </section>
@@ -252,18 +263,11 @@
         
         <div class="photo-wrapper">
           <div class="photo-frame portrait-photo mx-auto">
-            <img src="/memories/2024/family-dinner.webp" alt="Februari 2024 — Keluarga Kaka" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">Februari 2024</span>
-              <span class="tag-name">family-dinner.webp</span>
-            </div>
+            <img src="./public/memories/2024/family-dinner.webp" alt="Februari 2024 — Keluarga Kaka" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
           </div>
+          <p class="photo-caption text-center mt-3">Februari 2024 — makan bareng tante holdi.</p>
         </div>
 
-        <div class="mt-8 text-center">
-          <p class="editorial-text">dan entah kapan tepatnya,<br>ini mulai terasa biasa.</p>
-          <p class="editorial-text italic text-muted mt-2">in a good way.</p>
-        </div>
       </div>
     </section>
 
@@ -281,28 +285,15 @@
         
         <!-- Career progression sequence -->
         <div class="career-sequence">
+          <!-- Career Video Clip -->
           <div class="career-step offset-left mb-16">
-            <div class="photo-wrapper">
-              <div class="photo-frame small-photo">
-                <img src="/memories/2025/career/journey-01.webp" alt="Biu career journey 1" loading="lazy" class="memory-media">
-                <div class="photo-placeholder-tag">
-                  <span class="tag-year">journey</span>
-                  <span class="tag-name">journey-01.webp</span>
-                </div>
-              </div>
+            <div class="video-frame portrait-video">
+              <video playsinline preload="metadata" controls class="memory-video">
+                <source src="./public/memories/2025/career/journey-01.mp4" type="video/mp4">
+              </video>
+              <div class="video-play-overlay"><div class="play-badge">▶</div></div>
             </div>
-          </div>
-
-          <div class="career-step offset-right mb-20">
-            <div class="photo-wrapper">
-              <div class="photo-frame portrait-photo">
-                <img src="/memories/2025/career/journey-02.webp" alt="Biu career journey 2" loading="lazy" class="memory-media">
-                <div class="photo-placeholder-tag">
-                  <span class="tag-year">journey</span>
-                  <span class="tag-name">journey-02.webp</span>
-                </div>
-              </div>
-            </div>
+            <p class="photo-caption text-left mt-3">lagi ngajarin bocil bocil iiiii.</p>
           </div>
 
           <!-- Certification Payoff -->
@@ -310,11 +301,7 @@
             <h3 class="display-year small-year mb-4">Februari 2025</h3>
             <div class="photo-wrapper mx-auto mb-6">
               <div class="photo-frame large-photo landscape-photo mx-auto">
-                <img src="/memories/2025/career/massage-certification.webp" alt="Februari 2025 — Massage Certification" loading="lazy" class="memory-media">
-                <div class="photo-placeholder-tag">
-                  <span class="tag-year">Februari 2025</span>
-                  <span class="tag-name">massage-certification.webp</span>
-                </div>
+                <img src="./public/memories/2025/career/massage-certification.webp" alt="Februari 2025 — Balinese Massage Course" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
               </div>
             </div>
             <p class="editorial-text">satu langkah lagi.</p>
@@ -333,11 +320,7 @@
     <section class="section bali-reset" id="year-2025-bali">
       <div class="photo-wrapper hero-full">
         <div class="photo-frame hero-photo">
-          <img src="/memories/2025/bali/hero.webp" alt="Bali, Desember 2025" loading="lazy" class="memory-media">
-          <div class="photo-placeholder-tag">
-            <span class="tag-year">Desember 2025</span>
-            <span class="tag-name">bali/hero.webp</span>
-          </div>
+          <img src="./public/memories/2025/bali/hero.webp" alt="Bali, Desember 2025" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
         </div>
       </div>
       <div class="content-wrapper mt-6">
@@ -350,125 +333,75 @@
       <div class="content-wrapper">
         <h3 class="section-title mb-8 text-center">foto-foto yang sebenernya nggak perlu dipamerin.</h3>
         
-        <!-- Interactive Stack (7 Cards) -->
+        <!-- Interactive Stack (8 Cards with perfectly matched captions) -->
         <div class="card-stack-container" id="photoStack">
           <div class="stack-card">
             <div class="photo-frame square-photo">
-              <img src="/memories/random/random-01.webp" alt="Random 01" loading="lazy" class="memory-media">
-              <div class="photo-placeholder-tag"><span class="tag-name">random-01.webp</span></div>
+              <img src="./public/memories/random/random-01.webp" alt="Video Call Bertiga" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             </div>
-            <p class="caption">biu cakep. kaka questionable.</p>
+            <p class="caption">video call bertiga sama mamah ratu.</p>
           </div>
+
           <div class="stack-card">
             <div class="photo-frame square-photo">
-              <img src="/memories/random/random-02.webp" alt="Random 02" loading="lazy" class="memory-media">
-              <div class="photo-placeholder-tag"><span class="tag-name">random-02.webp</span></div>
+              <img src="./public/memories/random/random-02.webp" alt="Photobomb di Belakang" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             </div>
-            <p class="caption">probably habis makan.</p>
+            <p class="caption">naik gunung pertama kali nih kitaaa.</p>
           </div>
+
           <div class="stack-card">
             <div class="photo-frame square-photo">
-              <img src="/memories/random/random-03.webp" alt="Random 03" loading="lazy" class="memory-media">
-              <div class="photo-placeholder-tag"><span class="tag-name">random-03.webp</span></div>
+              <img src="./public/memories/random/random-03.webp" alt="Mangap di Jembatan Gantung" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             </div>
-            <p class="caption">ini kenapa ya.</p>
+            <p class="caption">AAAAAAA</p>
           </div>
+
           <div class="stack-card">
             <div class="photo-frame square-photo">
-              <img src="/memories/random/random-04.webp" alt="Random 04" loading="lazy" class="memory-media">
-              <div class="photo-placeholder-tag"><span class="tag-name">random-04.webp</span></div>
+              <img src="./public/memories/random/random-04.webp" alt="Lipat Lidah" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             </div>
-            <p class="caption">would still date.</p>
+            <p class="caption">adu skill lipat lidah nihhh.</p>
           </div>
+
           <div class="stack-card">
             <div class="photo-frame square-photo">
-              <img src="/memories/random/random-05.webp" alt="Random 05" loading="lazy" class="memory-media">
-              <div class="photo-placeholder-tag"><span class="tag-name">random-05.webp</span></div>
+              <img src="./public/memories/random/random-05.webp" alt="Energi Biu vs Kaka" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             </div>
-            <p class="caption">somehow masih disimpan.</p>
+            <p class="caption">energi Biu 100%, Kaka 2%.</p>
           </div>
+
           <div class="stack-card">
             <div class="photo-frame square-photo">
-              <img src="/memories/random/random-06.webp" alt="Random 06" loading="lazy" class="memory-media">
-              <div class="photo-placeholder-tag"><span class="tag-name">random-06.webp</span></div>
+              <img src="./public/memories/random/random-06.webp" alt="Era Masker Nyender" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             </div>
-            <p class="caption">no comment.</p>
+            <p class="caption">kaka cape euy, nyender dulu ahh.</p>
           </div>
+
           <div class="stack-card">
             <div class="photo-frame square-photo">
-              <img src="/memories/random/random-07.webp" alt="Random 07" loading="lazy" class="memory-media">
-              <div class="photo-placeholder-tag"><span class="tag-name">random-07.webp</span></div>
+              <img src="./public/memories/random/random-07.webp" alt="Car Date Minum Boba" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             </div>
-            <p class="caption">ini harusnya nggak masuk website.</p>
+            <p class="caption">car date sambil minum boba.</p>
+          </div>
+
+          <div class="stack-card">
+            <div class="photo-frame square-photo">
+              <img src="./public/memories/random/random-08.webp" alt="Zombie Arcade" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            </div>
+            <p class="caption">iiii celem nyaa ada zombii.</p>
           </div>
         </div>
         <p class="instruction-text text-center text-muted mt-6 text-sm italic">tap foto untuk buka berikutnya</p>
       </div>
     </section>
 
-    <!-- 11) VIDEO CALL MEMORIES / LDR -->
-    <section class="section ldr-memories" id="video-calls">
-      <div class="content-wrapper">
-        <p class="editorial-text italic text-muted mb-8">somewhere in between all of this...</p>
-        
-        <div class="filmstrip-container">
-          <div class="filmstrip-item mb-6">
-            <div class="video-frame portrait-video">
-              <video playsinline preload="metadata" controls class="memory-video">
-                <source src="/memories/video-calls/vc-01.mp4" type="video/mp4">
-              </video>
-              <div class="video-placeholder-tag">
-                <span class="tag-year">Video Call</span>
-                <span class="tag-name">vc-01.mp4</span>
-              </div>
-              <div class="video-play-overlay"><div class="play-badge">▶</div></div>
-            </div>
-          </div>
-
-          <div class="filmstrip-item offset-right mb-6">
-            <div class="video-frame portrait-video">
-              <video playsinline preload="metadata" controls class="memory-video">
-                <source src="/memories/video-calls/vc-02.mp4" type="video/mp4">
-              </video>
-              <div class="video-placeholder-tag">
-                <span class="tag-year">Video Call</span>
-                <span class="tag-name">vc-02.mp4</span>
-              </div>
-              <div class="video-play-overlay"><div class="play-badge">▶</div></div>
-            </div>
-          </div>
-
-          <div class="filmstrip-item asymmetric-left mb-6">
-            <div class="video-frame portrait-video">
-              <video playsinline preload="metadata" controls class="memory-video">
-                <source src="/memories/video-calls/vc-03.mp4" type="video/mp4">
-              </video>
-              <div class="video-placeholder-tag">
-                <span class="tag-year">Video Call</span>
-                <span class="tag-name">vc-03.mp4</span>
-              </div>
-              <div class="video-play-overlay"><div class="play-badge">▶</div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="quiet-padding text-center">
-          <p class="editorial-text">banyak waktu kita ternyata<br>habis di layar juga.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 12) FEBRUARY 2026 — LAST PHOTO TOGETHER, FOR NOW -->
+    <!-- 11) FEBRUARY 2026 — LAST PHOTO TOGETHER, FOR NOW -->
     <section class="section last-together" id="year-2026-feb">
       <div class="content-wrapper">
         <h2 class="display-year">Februari 2026.</h2>
         <div class="photo-wrapper mt-8 mb-6">
           <div class="photo-frame portrait-photo mx-auto">
-            <img src="/memories/2026/feb-last-together.webp" alt="Februari 2026 — Terakhir ketemu" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">Februari 2026</span>
-              <span class="tag-name">feb-last-together.webp</span>
-            </div>
+            <img src="./public/memories/2026/feb-last-together.webp" alt="Februari 2026 — Terakhir ketemu" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
           </div>
         </div>
         <div class="text-center mt-6">
@@ -478,17 +411,13 @@
       </div>
     </section>
 
-    <!-- 13) APRIL 2026 — BIU'S GARDEN -->
+    <!-- 12) APRIL 2026 — BIU'S GARDEN -->
     <section class="section bius-garden" id="year-2026-april">
       <div class="content-wrapper quiet-padding">
         <h2 class="display-year small-year">April 2026.</h2>
         <div class="photo-wrapper mt-8 mb-8">
           <div class="photo-frame large-photo mx-auto">
-            <img src="/memories/2026/april-garden.webp" alt="April 2026 — Kebun Biu" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">April 2026</span>
-              <span class="tag-name">april-garden.webp</span>
-            </div>
+            <img src="./public/memories/2026/april-garden.webp" alt="April 2026 — Kebun Biu" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
           </div>
         </div>
         
@@ -509,26 +438,22 @@
       </div>
     </section>
 
-    <!-- 14) JULY 2026 — BIU + NIECE/NEPHEW -->
+    <!-- 13) JULY 2026 — BIU + NIECE/NEPHEW -->
     <section class="section biu-niece" id="year-2026-july">
       <div class="content-wrapper quiet-padding">
         <div class="photo-wrapper offset-right mb-6">
           <div class="photo-frame portrait-photo">
-            <img src="/memories/2026/july-niece-nephew.webp" alt="Juli 2026 — Biu" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">Juli 2026</span>
-              <span class="tag-name">july-niece-nephew.webp</span>
-            </div>
+            <img src="./public/memories/2026/july-niece-nephew.webp" alt="Juli 2026 — Biu" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
           </div>
         </div>
         <div class="offset-right">
           <h3 class="place-name">Juli 2026.</h3>
-          <p class="editorial-text italic text-muted text-sm mt-1">Biu being Biu.</p>
+          <p class="editorial-text italic text-muted text-sm mt-1">Biu being Biu jadi auntinya max joa dan jejes.</p>
         </div>
       </div>
     </section>
 
-    <!-- 15) BIU, 26 -->
+    <!-- 14) BIU, 26 -->
     <section class="section biu-26" id="biu-26">
       <div class="content-wrapper">
         <h2 class="display-huge">26.</h2>
@@ -551,46 +476,94 @@
       </div>
     </section>
 
-    <!-- 16) SIGNATURE FUTURE SECTION -->
+    <!-- 15) SIGNATURE FUTURE SECTION -->
     <section class="section signature-future" id="future">
       <div class="content-wrapper text-center mb-12">
         <p class="editorial-text">selama ini,<br>ternyata banyak banget fotonya.</p>
       </div>
 
-      <!-- Quick Irregular Contact Sheet of Past Memories -->
+      <!-- Quick Irregular Contact Sheet of Past Memories (100% Real Photos) -->
       <div class="contact-sheet mb-16">
         <div class="contact-grid">
           <div class="contact-thumb">
-            <img src="/memories/2017/first-meeting.webp" alt="2017" loading="lazy" class="memory-media">
+            <img src="./public/memories/2017/first-meeting.webp" alt="2017" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             <span>2017</span>
           </div>
           <div class="contact-thumb">
-            <img src="/memories/2018/first-video-call.webp" alt="2018" loading="lazy" class="memory-media">
+            <img src="./public/memories/2018/first-video-call.webp" alt="2018" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             <span>2018</span>
           </div>
           <div class="contact-thumb">
-            <img src="/memories/2020/bandung-first-date.webp" alt="2020" loading="lazy" class="memory-media">
+            <img src="./public/memories/2018/first-video-call2.webp" alt="2018 VC 2" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>2018</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/2020/bandung-first-date.webp" alt="2020" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             <span>2020</span>
           </div>
           <div class="contact-thumb">
-            <img src="/memories/2021/relationship-hero.webp" alt="2021" loading="lazy" class="memory-media">
+            <img src="./public/memories/2020/bandung-first-date2.webp" alt="2020 Bandung 2" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>2020</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/2020/car-date.webp" alt="2020 Car" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>2020</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/2021/relationship-hero.webp" alt="2021" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             <span>2021</span>
           </div>
           <div class="contact-thumb">
-            <img src="/memories/2022/jogja/hero.webp" alt="2022" loading="lazy" class="memory-media">
+            <img src="./public/memories/2021/relationship-hero2.webp" alt="2021 2" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>2021</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/2022/jogja/hero1.webp" alt="2022" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             <span>2022</span>
           </div>
           <div class="contact-thumb">
-            <img src="/memories/2024/family-dinner.webp" alt="2024" loading="lazy" class="memory-media">
+            <img src="./public/memories/2022/jogja/hero2.webp" alt="2022 2" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>2022</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/2024/family-dinner.webp" alt="2024" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             <span>2024</span>
           </div>
           <div class="contact-thumb">
-            <img src="/memories/2025/career/massage-certification.webp" alt="2025" loading="lazy" class="memory-media">
+            <img src="./public/memories/2025/career/massage-certification.webp" alt="2025" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             <span>2025</span>
           </div>
           <div class="contact-thumb">
-            <img src="/memories/2026/feb-last-together.webp" alt="2026" loading="lazy" class="memory-media">
+            <img src="./public/memories/2025/bali/hero.webp" alt="Bali 2025" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>2025</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/2026/feb-last-together.webp" alt="2026 Feb" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
             <span>2026</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/2026/april-garden.webp" alt="2026 April" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>2026</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/2026/july-niece-nephew.webp" alt="2026 July" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>2026</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/random/random-02.webp" alt="Random Merapi" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>Trip</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/random/random-03.webp" alt="Random Jembatan" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>Jembatan</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/random/random-07.webp" alt="Random Boba" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>Boba</span>
+          </div>
+          <div class="contact-thumb">
+            <img src="./public/memories/random/random-08.webp" alt="Random Arcade" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
+            <span>Arcade</span>
           </div>
         </div>
       </div>
@@ -599,11 +572,7 @@
       <div class="content-wrapper mb-12">
         <div class="photo-wrapper hero-full mb-6">
           <div class="photo-frame hero-photo">
-            <img src="/memories/2026/feb-last-together.webp" alt="Februari 2026" loading="lazy" class="memory-media">
-            <div class="photo-placeholder-tag">
-              <span class="tag-year">Februari 2026</span>
-              <span class="tag-name">feb-last-together.webp</span>
-            </div>
+            <img src="./public/memories/2026/feb-last-together.webp" alt="Februari 2026" loading="lazy" class="memory-media" onload="this.classList.add('is-loaded')" onerror="this.classList.add('media-failed')">
           </div>
         </div>
         <p class="editorial-text text-center">dan ini foto kita yang paling terakhir.</p>
@@ -619,33 +588,33 @@
         <p class="editorial-text text-center italic">karena masih banyak<br>yang belum kita ambil.</p>
       </div>
 
-      <!-- Empty Physical / Editorial Frames -->
+      <!-- 4 Future Intentional Empty Frames -->
       <div class="future-frames">
         <!-- Australia -->
-        <div class="frame-group asymmetric-left mb-24">
-          <div class="empty-frame portrait-frame">
-            <span class="frame-text">foto belum ada.</span>
+        <div class="frame-group text-center mx-auto mb-20">
+          <div class="empty-frame landscape-frame rotate-subtle-left mx-auto">
+            <span class="frame-text">Australia</span>
           </div>
-          <p class="frame-caption">Australia</p>
+          <p class="frame-caption mt-4">Australia.</p>
+          <p class="frame-subcaption">suatu hari nanti.</p>
         </div>
 
-        <!-- Wedding -->
-        <div class="frame-group offset-right mb-28">
-          <div class="empty-frame landscape-frame rotate-subtle-right"></div>
-          <p class="frame-caption">nanti, foto kita di hari itu.</p>
+        <!-- Rumah Kita -->
+        <div class="frame-group text-center mx-auto mb-20">
+          <div class="empty-frame square-frame rotate-subtle-right mx-auto">
+            <span class="frame-text">Rumah</span>
+          </div>
+          <p class="frame-caption mt-4">rumah kita.</p>
+          <p class="frame-subcaption">yang tenang, yang hangat.</p>
         </div>
 
-        <!-- First Home -->
-        <div class="frame-group asymmetric-left mb-28">
-          <div class="empty-frame square-frame rotate-subtle-left"></div>
-          <p class="frame-caption">our first home.</p>
-          <p class="frame-subcaption">probably berantakan.</p>
-        </div>
-
-        <!-- Biu's Wellness Practice -->
-        <div class="frame-group text-center mx-auto mb-28">
-          <div class="empty-frame large-portrait-frame"></div>
-          <p class="frame-caption mt-4">tempat Biu membangun mimpinya.</p>
+        <!-- Biu's Clinic -->
+        <div class="frame-group text-center mx-auto mb-20">
+          <div class="empty-frame large-portrait-frame rotate-subtle-left mx-auto">
+            <span class="frame-text">Biu's Space</span>
+          </div>
+          <p class="frame-caption mt-4">tempat praktek Biu.</p>
+          <p class="frame-subcaption">Kaka mau lihat plang nama Biu dipasang di depan.</p>
         </div>
 
         <!-- Family -->
@@ -671,7 +640,7 @@
       </div>
     </section>
 
-    <!-- 17) LETTER -->
+    <!-- 16) LETTER -->
     <section class="section letter-section vh-100 flex-center" id="letter">
       <button id="openLetterBtn" class="letter-reveal-btn">Untuk Biu</button>
       
@@ -681,33 +650,24 @@
           <div class="letter-content">
             <p>Biu,</p>
             <p>kadang Kaka masih suka mikir lucu juga ya.</p>
-            <p>Awalnya kita cuma dua orang random di internet. Terus dari yang dulu belum punya kerjaan, belum punya banyak uang, dan kalau mau ketemu harus mikirin tabungan masing-masing... sekarang kita udah sampai sejauh ini.</p>
-            <p>Dulu kita cuma mikirin gimana caranya bisa ketemu lagi.</p>
-            <p>Sekarang kita udah mulai ngomongin hal-hal yang jauh lebih besar. Kerjaan, mimpi, Australia, rumah, nikah, keluarga.</p>
-            <p>Jujur, kadang rasanya masih agak nggak masuk akal.</p>
+            <p>Awalnya kita cuma dua orang random di internet ketemu di Chatous terus ke Line dan akhirnya ke Whatsapp. Terus dari yang dulu belum punya kerjaan, belum punya banyak uang, dan kalau mau ketemu harus mikirin tabungan masing-masing... sekarang kita udah sampai sejauh ini.</p>
+            <p>Dulu kita cuma mikirin gimana caranya bisa ketemu lagi atau buat nanyain sekolah gimana hari ini atau kuliah gimana hari ini dll.</p>
+            <p>Sekarang kita udah mulai ngomongin hal-hal yang jauh lebih besar. Kerjaan, mimpi kita untuk ke luar negri, rumah, nikah, keluarga.</p>
             <p>Tapi Kaka seneng karena dari semua yang berubah selama ini, orangnya tetap Biu.</p>
-            <p>Kaka seneng bisa lihat Biu tumbuh sampai sekarang. Kaka juga pengen lihat Biu terus jalan ke arah yang Biu mau, termasuk mimpi Biu jadi wellness practitioner.</p>
-            <p>Kaka nggak tahu nanti hidup kita bakal kejadian persis kayak yang kita bayangin atau nggak.</p>
-            <p>Tapi Kaka pengen jalan ke arah sana bareng Biu.</p>
-            <p>Kaka pengen suatu hari nanti kita bisa lihat lagi semuanya dari jauh dan bilang, “ternyata kita beneran sampai sini ya.”</p>
+            <p>Kaka seneng bisa lihat Biu tumbuh sampai sekarang. Kaka juga pengen lihat Biu terus jalan ke arah yang Biu mau, termasuk mimpi Biu buat ngembangin Mettasarasa lebih jauh atau terkait wellness.</p>
+            <p>Kaka pengen suatu hari nanti kita bisa lihat satu satu impian kita kewujud pelan pelan dan bilang, “ternyata kita beneran sampai sini ya sayangkuu.”</p>
             <p>Selamat ulang tahun ke-26, Biu.</p>
             <p>Kaka sayang banget sama Biu.</p>
             <p>Sampai ketemu di semua foto yang belum kita ambil.</p>
-            <p class="signature">— Kaka</p>
+            <p class="signature">— Your lovely boyfiee</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 18) FINAL SCREEN -->
+    <!-- 17) FINAL SCREEN -->
     <section class="section final-screen vh-100 flex-center" id="final">
-      <div class="final-backdrop">
-        <div class="ending-photo">
-          <img src="/memories/ending/final.webp" alt="Selamat Ulang Tahun Biu" loading="lazy" class="memory-media">
-          <div class="photo-placeholder-tag"><span class="tag-name">ending/final.webp</span></div>
-        </div>
-      </div>
-      <div class="final-content text-center z-10 mix-blend-diff">
+      <div class="final-content text-center z-10">
         <h2 class="display-large mb-4">Selamat ulang tahun, Biu.</h2>
         <p class="editorial-text mb-2">Kaka sayang Biu.</p>
         <p class="editorial-text italic text-sm mb-8">sampai ketemu di semua foto yang belum kita ambil.</p>
@@ -716,6 +676,6 @@
     </section>
   </main>
 
-  <script src="./main.js" type="module"></script>
+  <script src="./bundle.js"></script>
 </body>
 </html>
